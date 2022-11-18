@@ -5,7 +5,7 @@ services:
 language: generic
 
 before_install:
-  - docker build -t faizshiraji/react-test ./client/Dockerfile.dev ./client
+  - docker build -t faizshiraji/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true faizshiraji/react-test npm test -- --coverage
