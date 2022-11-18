@@ -2,7 +2,7 @@ sudo: required
 services:
   - docker
 
-language: node_js
+language: generic
 
 before_install:
   - docker build -t faizshiraji/react-test ./client/Dockerfile.dev ./client
