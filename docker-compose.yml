@@ -1,11 +1,11 @@
 version: '2'
 services:
   client:
-    image: "faizshiraji/multi-client-10-14"
+    image: "faizshiraji/multi-client"
     mem_limit: 128m
     hostname: client
   server:
-    image: "faizshiraji/multi-server-10-14"
+    image: "faizshiraji/multi-server"
     mem_limit: 128m
     hostname: api
     environment:
@@ -17,14 +17,14 @@ services:
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
   worker:
-    image: "faizshiraji/multi-worker-10-14"
+    image: "faizshiraji/multi-worker"
     mem_limit: 128m
     hostname: worker
     environment:
       - REDIS_HOST=$REDIS_HOST
       - REDIS_PORT=$REDIS_PORT
   nginx:
-    image: "faizshiraji/multi-nginx-10-14"
+    image: "faizshiraji/multi-nginx"
     mem_limit: 128m
     hostname: nginx
     ports:
