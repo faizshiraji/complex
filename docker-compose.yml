@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
   client:
     image: "faizshiraji/multi-client-10-14"
